@@ -14,7 +14,11 @@ import org.openqa.selenium.WebDriver;
 public abstract class BaseTest {
 
 // główny interfejs Selenium do sterowania przeglądarką
-    protected WebDriver driver;
+// scope: protected - chroniony dostęp, by klasy dziedziczące mogły z niego korzystać
+// ale nie był dostępny spoza hierarchii dziedziczenia
+// (zapewnienie enkapsulacji i bezpieczeństwa danych)
+
+protected WebDriver driver;
 
 // adnotacje JUnit 5, sterujące cyklem życia testów
     @BeforeEach
