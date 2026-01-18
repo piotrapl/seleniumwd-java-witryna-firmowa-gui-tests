@@ -1,3 +1,8 @@
+//BaseTest to abstrakcyjna klasa bazowa dla wszystkich testów
+// Rola klasy BaseTest - dostarczenie wspólnych funkcjonalności
+// 1. zarządzanie cyklem życia WebDrivera.
+// Inicjalizuje WebDriver przed każdym testem i zamyka go po teście.
+
 package pl.ageno.tests.base;
 
 import org.junit.jupiter.api.AfterEach;
