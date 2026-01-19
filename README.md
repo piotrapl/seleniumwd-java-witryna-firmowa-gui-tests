@@ -1,10 +1,10 @@
 ## Wprowadzenie
 Projekt testów automatycznych w Selenium Webdriver/Java/jUnit. Testowana aplikacja: formularz kontaktowy na stronie https://ageno.pl/kontakt/. Strona stanowi typowy przykład prostej ale funkcjonalnej witryny firmwej.
 ### Introduction in English 
-Automated test project using Selenium WebDriver, Java and JUnit.
+*Automated test project using Selenium WebDriver, Java and JUnit.
 The tested application is the contact form on https://ageno.pl/kontakt/
 .
-The website is a typical example of a simple yet functional company website.
+The website is a typical example of a simple yet functional company website.*
 
 
 ## Scenariusz testowy (test scenario)
