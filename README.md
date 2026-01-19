@@ -66,19 +66,15 @@ mvn test -Dheadless=true
 
 ## Najważniejsze cechy rozwiązania (Key features)
 
-Page Object Model wspierany przez PageFactory
+#### Page Object Model wspierany przez PageFactory
 
-Wyłącznie explicit waits (brak implicit waits)
+  Wyłącznie explicit waits (brak implicit waits)
 
-Mechanizm retry oraz synchronizacja z pełnym załadowaniem strony (document.readyState)
+#### Testy data-driven oparte o JUnit 5 (@ParameterizedTest)
 
-Testy data-driven oparte o JUnit 5 (@ParameterizedTest)
+#### Czytelna i skalowalna struktura projektu
 
-Asercje sprawdzające dokładną równość tekstu komunikatu
-
-Czytelna i skalowalna struktura projektu
-
-Uruchamianie testów przez Maven (projekt gotowy pod CI)
+#### Uruchamianie testów przez Maven (projekt gotowy pod CI)
 
 ## Co można by ulepszyć ? (What could be improved ?)
 
