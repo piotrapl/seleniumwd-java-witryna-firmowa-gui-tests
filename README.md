@@ -1,132 +1,122 @@
-# seleniumwd-java-ageno_pl-gui-tests
-Automated tests fo the webpage: ageno.pl 
+## Opis projektu
+Projekt testów automatycznych w Selenium Webdriver/Java/jUnit. Testowana aplikacja: formularz kontaktowy na stronie https://ageno.pl/kontakt/. Strona stanowi typowy przykład prostej ale funkcjonalnej witryny firmwej.
+# english
+Automated test project using Selenium WebDriver, Java and JUnit.
+The tested application is the contact form on https://ageno.pl/kontakt/
+.
+The website is a typical example of a simple yet functional company website.
 
-Selenium WebDriver – Test Automation (Java)
-Project overview
 
-This project is a minimal, production-style test automation framework.
+## Scenariusz testowy (test scenario)
+Negatywny przypadek testowy – walidacja pola e-mail
 
-The framework validates client-side form validation on the Ageno.pl contact page using:
+Otwarcie strony: https://ageno.pl/kontakt/
 
-Selenium WebDriver
+Kliknięcie w pole „Twój e-mail”
 
-Java 17
+Wpisanie wartości, która nie jest adresem e-mail (np. fsfdadfsafsaf)
 
-JUnit 5
+Opuszczenie pola za pomocą klawisza TAB
 
-Maven
-
-Page Object Model (POM) with PageFactory
-
-Data-driven tests
-
-Scope:
-
-automated negative test case
-
-validation of exact error message
-
-stable waits and retry mechanism for page loading
-
-execution in Chrome browser only
-
-Test scenario (business description)
-
-Negative test case – email field validation
-
-Open page: https://ageno.pl/kontakt/
-
-Click into the “Twój e-mail” input field
-
-Enter a value that is not an email (e.g. fsfdadfsafsaf)
-
-Leave the field using TAB
-
-Verify that the validation message is displayed:
+Weryfikacja wyświetlenia komunikatu walidacyjnego o dokładnej treści:
 
 Proszę wpisać adres e-mail.
 
-Requirements
+## Wymagania (Requirements)
 
-To run this project locally, the following requirements must be met:
+Do uruchomienia projektu wymagane są:
 
 Java JDK 17
 
 Apache Maven 3.8+
 
-Google Chrome browser
+Przeglądarka Google Chrome
 
-Internet connection
+Dostęp do Internetu
 
-No manual WebDriver setup is required (Selenium Manager is used).
+Projekt korzysta z Selenium Manager, dlatego nie wymaga ręcznego pobierania ani konfiguracji ChromeDrivera.
 
-How to verify requirements (command line)
-Check Java version
+Sprawdzenie wymagań (command line)
+Java
 java -version
 
-
-Expected:
+Oczekiwany wynik:
 
 java 17.x
 
-Check Maven installation
+Maven
 mvn -version
 
-
-Expected:
+Oczekiwany wynik:
 
 Apache Maven 3.x
 Java version: 17
 
-Check Chrome installation
+Chrome
 chrome --version
 
-
-(or google-chrome --version depending on OS)
-
-How to run tests
-Run tests in normal (headed) mode
+## Uruchamianie testów (Running the tests)
+Tryb standardowy (z widoczną przeglądarką)
 mvn test
 
-Run tests in headless mode
+Tryb headless
 mvn test -Dheadless=true
 
-Test design highlights
+## Najważniejsze cechy rozwiązania (Key features)
 
-Page Object Model + PageFactory
+Page Object Model wspierany przez PageFactory
 
-Explicit waits only (no implicit waits)
+Wyłącznie explicit waits (brak implicit waits)
 
-Retry & page load synchronization (document.readyState)
+Mechanizm retry oraz synchronizacja z pełnym załadowaniem strony (document.readyState)
 
-Data-driven tests using JUnit 5 @ParameterizedTest
+Testy data-driven oparte o JUnit 5 (@ParameterizedTest)
 
-Exact message assertion (string equality, not contains)
+Asercje sprawdzające dokładną równość tekstu komunikatu
 
-Clean project structure
+Czytelna i skalowalna struktura projektu
 
-Maven-based execution (CI-ready)
+Uruchamianie testów przez Maven (projekt gotowy pod CI)
 
-Project structure
-src/test/java
-└── pl.ageno.tests
-    ├── base
-    │   ├── BaseTest.java
-    │   └── DriverFactory.java
-    ├── pages
-    │   └── ContactPage.java
-    └── ContactFormEmailValidationTest.java
+## Struktura projektu (Project structure)
+selenium-ageno-junit/
+├─ pom.xml
+└─ src
+   └─ test
+      ├─ java
+      │  └─ pl
+      │     └─ ageno
+      │        └─ tests
+      │           ├─ base
+      │           │  ├─ BaseTest.java
+      │           │  └─ DriverFactory.java
+      │           ├─ pages
+      │           │  └─ ContactPage.java
+      │           └─ ContactFormEmailValidationTest.java
+      └─ resources
+         └─ junit-platform.properties
 
-Purpose of this project
+## Co można by ulepszyć ? (What could be improved)
 
-This repository demonstrates:
+Raportowanie i diagnostyka (np. Allure / Extent Reports)
+Aby zapewnić czytelne raporty, szybkie debugowanie błędów oraz lepszą widoczność wyników testów.
 
-practical Selenium WebDriver usage
+Konfiguracja i środowiska (profiles, properties)
+Aby umożliwić uruchamianie testów na różnych środowiskach (URL, timeouty, tryb headless) bez zmian w kodzie.
 
-clean test automation architecture
+Skalowalność (CI/CD, równoległość, wiele przeglądarek)
+Aby skrócić czas wykonania testów i dostosować framework do pracy zespołowej oraz pipeline’ów CI.
 
-ability to design stable UI tests
+## Cel projektu (Project goal)
 
-understanding of real-world form validation
+Repozytorium demonstruje:
 
-readiness for Test Automation Engineer responsibilities
+praktyczne użycie Selenium WebDriver w Javie,
+
+umiejętność projektowania stabilnych testów UI,
+
+znajomość walidacji formularzy webowych,
+
+poprawną architekturę testów automatycznych,
+
+gotowość do pracy na stanowisku Test Automation Engineer.
