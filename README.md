@@ -1,6 +1,6 @@
-## Wprowadzenie
+## Wprowadzenie (Intro)
 Projekt testów automatycznych w Selenium Webdriver/Java/jUnit. Testowana aplikacja: formularz kontaktowy na stronie https://ageno.pl/kontakt/. Strona stanowi typowy przykład prostej ale funkcjonalnej witryny firmwej.
-### Introduction in English 
+### English version
 *Automated test project using Selenium WebDriver, Java and JUnit.
 The tested application is the contact form on https://ageno.pl/kontakt/
 .
