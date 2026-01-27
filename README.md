@@ -93,7 +93,7 @@ mvn test -Dheadless=true
 
 - Duże wsparcie społeczności → popularny standard
 
-## Wady używania JUnit w porównaniu 
+## Wady używania JUnit
 
 - Ograniczone możliwości grupowania testów w porównaniu do TestNG
 
