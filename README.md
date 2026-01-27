@@ -83,3 +83,12 @@ mvn test -Dheadless=true
 #### Skalowalność (CI/CD, równoległość, wiele przeglądarek)
   aby skrócić czas wykonania testów i dostosować framework do pracy zespołowej oraz pipeline’ów CI.
 
+## Zalety używania JUnit
+
+- Łatwe pisanie i utrzymanie testów
+
+- Nowoczesny design JUnit 5 → przejrzysty cykl życia, rozszerzenia
+
+- B. dobra integracja z narzędziami i frameworkami
+
+- Duże wsparcie społeczności → popularny standard
