@@ -9,6 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+// To jest klasa reprezentująca stronę kontaktową witryny firmowej
+
+//  @FindBy(css = "input[name='your-email']") to selektor pola email
+//  wyeażenie  @FindBy(..) nad polem emailInput wskazuje, że jest
+//  to pole input dla adresu email
+//  @FindBy oznacza elementy strony, które będą inicjalizowane przez PageFactory
+
 public class ContactPage {
 
     private final WebDriver driver;
