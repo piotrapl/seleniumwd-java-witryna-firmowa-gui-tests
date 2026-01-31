@@ -47,7 +47,8 @@ public class ContactPage {
     public ContactPage open() throws TimeoutException {
         int attempt = 0;
 // waitForPageToLoad - metoda czekająca aż strona się w pełni załaduje
-// sleepSilently - metoda wstrzymująca wykonanie na określony czas (1 sekundę) bez rzucania wyjątku
+// sleepSilently - metoda wstrzymująca wykonanie na określony czas (1 sekundę) 
+// bez rzucania wyjątku
 
         while (attempt < MAX_RETRIES) {
             try {
