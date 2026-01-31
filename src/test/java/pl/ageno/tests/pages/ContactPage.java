@@ -38,10 +38,16 @@ public class ContactPage {
     }
 
     /**
+     * public ContactPage open() - metoda otwierająca stronę kontaktową
+     * 
      * Otwiera stronę z retry + wait na pełne załadowanie DOM
+     * pętla while próbuje otworzyć stronę do MAX_RETRIES razy w przypadku błędu WebDriverException
+     * jeśli strona nie załaduje się poprawnie
      */
     public ContactPage open() throws TimeoutException {
         int attempt = 0;
+// waitForPageToLoad - metoda czekająca aż strona się w pełni załaduje
+// sleepSilently - metoda wstrzymująca wykonanie na określony czas (1 sekundę) bez rzucania wyjątku
 
         while (attempt < MAX_RETRIES) {
             try {
