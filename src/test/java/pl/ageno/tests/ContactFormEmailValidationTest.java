@@ -19,9 +19,13 @@ Page Object Model (POM) - wzorzec projektowy do organizacji kodu testowego
 */
 public class ContactFormEmailValidationTest extends BaseTest {
 
-// Metody i klasy pomocnicze:
-// EmailCase - klasa reprezentująca przypadek testowy walidacji email
-
+/* Klasa pomocnicza do przechowywania danych testowych:
+   record EmailCase(String notEmailValue, String expectedMessage)
+*/
+/* record - specjalny typ klasy w Javie do przechowywania niezmiennych danych
+     notEmailValue - niepoprawny adres email do testu
+     expectedMessage - oczekiwana wiadomość walidacyjna
+*/
     record EmailCase(String notEmailValue, String expectedMessage) { }
     //     @MethodSource("emailValidationCases") - metoda dostarczająca dane testowe do testu walidacji email
     static Stream<EmailCase> emailValidationCases() {
@@ -32,7 +36,8 @@ public class ContactFormEmailValidationTest extends BaseTest {
             )
         );
     }
-
+// shouldShowExactEmailValidationMessage 
+//    - test walidacji email
     //     @ParameterizedTest(name = "Walidacja email: \"{0}\" -> \"{1}\"") - test walidacji email  
     //     używa danych z metody emailValidationCases()
     //     tworzy instancję ContactPage, otwiera stronę, klika w pole email,
