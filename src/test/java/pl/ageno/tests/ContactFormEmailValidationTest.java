@@ -4,7 +4,9 @@ package pl.ageno.tests; - deklaracja pakietu, w którym znajduje się klasa test
         pl.ageno - bo to odwrócona nazwa domeny strony   (strona wybrana przypadkowo, jako typowy przykład)
         tests - bo to pakiet z testami
 */
-/* 
+/*
+import - to jest dyrektywa importu w Javie, która pozwala na użycie klas z innych pakietów
+ 
 importujemy:     
     1. klasy: bazową BaseTest klasę strony ContactPage
     2. adnotacje i klasy JUnit do testów parametryzowanych
