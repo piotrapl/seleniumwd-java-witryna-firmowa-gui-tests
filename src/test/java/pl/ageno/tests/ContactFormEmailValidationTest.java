@@ -1,5 +1,16 @@
 package pl.ageno.tests;
-
+/*
+package pl.ageno.tests; - deklaracja pakietu, w którym znajduje się klasa testowa
+        pl.ageno - bo to odwrócona nazwa domeny strony   (strona wybrana przypadkowo, jako typowy przykład)
+        tests - bo to pakiet z testami
+*/
+/* 
+importujemy:     
+    1. klasy: bazową BaseTest klasę strony ContactPage
+    2. adnotacje i klasy JUnit do testów parametryzowanych
+    3. klasę Stream do tworzenia strumienia danych testowych
+    4. statycznie metodę assertEquals do porównywania wartości w test
+*/
 import pl.ageno.tests.base.BaseTest;
 import pl.ageno.tests.pages.ContactPage;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -64,3 +75,17 @@ public class ContactFormEmailValidationTest extends BaseTest {
         assertEquals(tc.expectedMessage(), actual);
     }
 }
+
+/*
+waitAndGetEmailValidationMessageText - metoda w klasie ContactPage, 
+    która czeka na pojawienie się komunikatu walidacyjnego dla pola email i zwraca jego tekst
+clickEmail  - metoda w klasie ContactPage: klika w pole email
+typeEmail   - metoda w kl. ContactPage:    wpisuje podany tekst do pola email
+leaveEmailByTab - metoda w klasie ContactPage, która opuszcza pole email za pomocą klawisza TAB
+notEmailValue - niepoprawny adres email do testu,
+    to wartość przekazywana do testu w obiekcie EmailCase
+    uzyskujemy do niej dostęp za pomocą me  tody notEmailValue()
+expectedMessage - oczekiwana wiadomość walidacyjna 
+    to też wartość przekazywana do testu w obiekcie EmailCase
+    uzyskujemy do niej dostęp za pomocą metody expectedMessage()
+    */
